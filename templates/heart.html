@@ -1,0 +1,173 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container">
+  <div class="display-3 my-2 text-center">Heart Disease Prediction</div>
+  <hr />
+  {% if context %}
+  <div class="display-4 my-2 text-center">
+    You {{ context }} heart disease.
+  </div>
+  {% endif %}
+
+
+  <div class="mt-4">
+    <form class="row" method="POST" action="{% url 'heart' %}">
+      {% csrf_token %}
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="age"
+            value="0"
+            name="age"
+          />
+        </div>
+        <div class="form-group">
+          <label for="sex">Sex</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="sex"
+            value="0"
+            name="sex"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cp">Chest Pain Type</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="cp"
+            value="0"
+            name="cp"
+          />
+        </div>
+        <div class="form-group">
+          <label for="trestbps">Resting Blood Pressure</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="trestbps"
+            value="0"
+            name="trestbps"
+          />
+        </div>
+        <div class="form-group">
+          <label for="chol">Serum Cholestoral in mg/dl</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="chol"
+            value="0"
+            name="chol"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="fbs">Fasting Blood Sugar</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="fbs"
+            value="0"
+            name="fbs"
+          />
+        </div>
+        <div class="form-group">
+          <label for="restecg">Resting Electrocardiographic Results</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="restecg"
+            value="0"
+            name="restecg"
+          />
+        </div>
+        <div class="form-group">
+          <label for="thalach">Maximum Heart Rate achieved</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="thalach"
+            value="0"
+            name="thalach"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exang">Exercise Induced Angina</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="exang"
+            value="0"
+            name="exang"
+          />
+        </div>
+        <div class="form-group">
+          <label for="oldpeak">ST depression induced by exercise relative to rest</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="oldpeak"
+            value="0"
+            name="oldpeak"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="slope">SLOPE</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="slope"
+            value="0"
+            name="slope"
+          />
+        </div>
+        <div class="form-group">
+          <label for="ca">CA</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="ca"
+            value="0"
+            name="ca"
+          />
+        </div>
+        <div class="form-group mb-5">
+          <label for="thal">THAL</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="thal"
+            value="0"
+            name="thal"
+          />
+        </div>
+
+        <button type="submit" class="btn-lg btn-block btn btn-primary mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

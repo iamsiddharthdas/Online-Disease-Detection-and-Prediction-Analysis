@@ -1,0 +1,10 @@
+Django==3.0.7
+django-heroku==0.3.1
+numpy==1.17.2
+pandas==0.25.1
+python-dateutil==2.8.0
+scikit-learn==0.21.3
+scipy==1.3.1
+six==1.12.0
+sqlparse==0.3.0
+whitenoise==4.1.4

@@ -1,0 +1,80 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container"  >
+  <div class="display-3 my-2 text-center">Breast Cancer Prediction</div>
+  <hr />
+  {% if context %}
+  <div class="display-4 my-2 text-center">
+    You {{ context }} breast cancer.
+  </div>
+  {% endif %}
+
+  <div class="col-md-4">
+    <form class="" method="POST" action="{% url 'breast' %}">
+      {% csrf_token %}
+      <div class="">
+        <div class="form-group">
+          <label for="radius">Mean Radius</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="radius"
+            value="0"
+            name="radius"
+          />
+        </div>
+        <div class="form-group">
+          <label for="texture">Mean Texture</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="texture"
+            value="0"
+            name="texture"
+          />
+        </div>
+        <div class="form-group">
+          <label for="perimeter">Mean Perimeter</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="perimeter"
+            value="0"
+            name="perimeter"
+          />
+        </div>
+        <div class="form-group">
+          <label for="area">Mean Area</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="area"
+            value="0"
+            name="area"
+          />
+        </div>
+        <div class="form-group">
+          <label for="smoothness">Mean Smoothness</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="smoothness"
+            value="0"
+            name="smoothness"
+          />
+        </div>
+      </div>
+      <div class="mt-4">
+        <button type="submit" class="btn-lg btn-block btn btn-danger mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock%}

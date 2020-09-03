@@ -1,0 +1,115 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container">
+  <div class="display-3 my-2 text-center">Diabetes Disease Prediction</div>
+  <hr />
+  {% if context %}
+  <div class="display-4 my-2 text-center">
+    You {{ context }} diabetes disease.
+  </div>
+  {% endif %}
+
+  
+  <div class="mt-4">
+    <form class="row" method="POST" action="{% url 'diabetes' %}">
+      {% csrf_token %}
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="pregnancies">Pregnancies</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="pregnancies"
+            value="0"
+            name="pregnancies"
+          />
+        </div>
+        <div class="form-group">
+          <label for="glucose">Glucose</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="glucose"
+            value="0"
+            name="glucose"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bloodpressure">Blood Pressure</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="bloodpressure"
+            value="0"
+            name="bloodpressure"
+          />
+        </div>
+        <div class="form-group">
+          <label for="skinthickness">Skin Thickness</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="skinthickness"
+            value="0"
+            name="skinthickness"
+          />
+        </div>
+        <div class="form-group">
+          <label for="insulin">Insulin</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="insulin"
+            value="0"
+            name="insulin"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="bmi">BMI</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="bmi"
+            value="0"
+            name="bmi"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pedigree">Diabetes Prediction Function</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="pedigree"
+            value="0"
+            name="pedigree"
+          />
+        </div>
+        <div class="form-group mb-5">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="age"
+            value="0"
+            name="age"
+          />
+        </div>
+        <button type="submit" class="btn-lg btn-block btn btn-primary mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

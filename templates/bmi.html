@@ -1,0 +1,60 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container"  >
+  <div class="display-3 my-2 text-center">BMI-Prediction of Health Status</div>
+  <hr />
+  {% if context %}
+  <div class="display-4 my-2 text-center">
+    You are {{ context }} .
+  </div>
+  {% endif %}
+
+  <div class="col-md-4">
+    <form class="" method="POST" action="{% url 'bmi' %}">
+      {% csrf_token %}
+      <div class="">
+        <div class="form-group">
+          <label for="gender">Gender(Male:0 Female:1)</label>
+          <input
+            type="number"
+            step="1"
+            class="form-control"
+            id="gender"
+            value="0"
+            name="gender"
+          />
+        </div>
+        <div class="form-group">
+          <label for="height">Height (in cm)</label>
+          <input
+            type="number"
+            step="1.00"
+            class="form-control"
+            id="height"
+            value="1"
+            name="height"
+          />
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (in kg)</label>
+          <input
+            type="number"
+            step="1.00"
+            class="form-control"
+            id="weight"
+            value="1"
+            name="weight"
+          />
+        </div>
+
+      </div>
+      <br>
+      <div class="mt-4">
+        <button type="submit" class="btn-lg btn-block btn btn-danger mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{%endblock%}
