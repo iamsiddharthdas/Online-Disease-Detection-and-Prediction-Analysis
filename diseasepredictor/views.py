@@ -159,10 +159,10 @@ def diabetes(request):
                   'diabetes.html',
                   {
                       'context': value,
-                      'title': 'Diabetes Prediction',
-                      'active': 'btn btn-success peach-gradient text-grey',
+                      'title': 'Diabetes Disease Prediction',
+                      'active': 'btn btn-success peach-gradient text-white',
                       'diabetes': True,
-                      'background': 'bg-dark text-grey'
+                      'background': 'bg-brown text-white'
                   }
                   )
 
@@ -210,9 +210,9 @@ def breast(request):
                   {
                       'context': value,
                       'title': 'Breast Cancer Prediction',
-                      'active': 'btn btn-success peach-gradient text-grey',
+                      'active': 'btn btn-success peach-gradient text-white',
                       'breast': True,
-                      'background': 'bg-info text-grey'
+                      'background': 'bg-pink text-white'
                   })
 
 
