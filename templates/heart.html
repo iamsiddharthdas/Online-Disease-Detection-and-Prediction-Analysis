@@ -15,7 +15,7 @@
       {% csrf_token %}
       <div class="col-md-4">
         <div class="form-group">
-          <label for="age">Age</label>
+          <label for="age">Age(1-90)</label>
           <input
             type="number"
             step=".00001"
@@ -26,7 +26,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="sex">Sex</label>
+          <label for="sex">Sex(0:Male;1:Female)</label>
           <input
             type="number"
             step=".00001"
@@ -37,7 +37,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="cp">Chest-Pain Type</label>
+          <label for="cp">Chest-Pain Type(0-3)</label>
           <input
             type="number"
             step=".00001"
@@ -48,7 +48,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="trestbps">Blood Pressure</label>
+          <label for="trestbps">Blood Pressure(80-180mmHg)</label>
           <input
             type="number"
             step=".00001"
@@ -59,7 +59,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="chol">Serum Cholestoral in mg/dl</label>
+          <label for="chol">Serum Cholestoral(160-380mg/dl)</label>
           <input
             type="number"
             step=".00001"
@@ -72,7 +72,7 @@
       </div>
       <div class="col-md-4">
         <div class="form-group">
-          <label for="fbs">Fasting Blood Sugar</label>
+          <label for="fbs">Fasting Blood Sugar(0:No;1-Yes)</label>
           <input
             type="number"
             step=".00001"
@@ -83,7 +83,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="restecg">Resting ElectroCardiographic Results</label>
+          <label for="restecg">Resting ElectroCardiographic Results(0:No;1-Yes)</label>
           <input
             type="number"
             step=".00001"
@@ -94,7 +94,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="thalach">Maximum Heart Rate achieved</label>
+          <label for="thalach">Maximum Heart Rate achieved(1-3)</label>
           <input
             type="number"
             step=".00001"
@@ -105,7 +105,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="exang">Exercise Induced Angina</label>
+          <label for="exang">Exercise Induced Angina(0:No;1:Yes)</label>
           <input
             type="number"
             step=".00001"
@@ -116,7 +116,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="oldpeak">ST depression induced by exercise relative to rest</label>
+          <label for="oldpeak">ST depression induced by exercise relative to rest(0-3.5)</label>
           <input
             type="number"
             step=".00001"
@@ -129,7 +129,7 @@
       </div>
       <div class="col-md-4">
         <div class="form-group">
-          <label for="slope">SLOPE</label>
+          <label for="slope">SLOPE(0-2)</label>
           <input
             type="number"
             step=".00001"
@@ -140,7 +140,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="ca">CA</label>
+          <label for="ca">CA(0-2)</label>
           <input
             type="number"
             step=".00001"
@@ -151,7 +151,7 @@
           />
         </div>
         <div class="form-group mb-5">
-          <label for="thal">THAL</label>
+          <label for="thal">THAL(1-3)</label>
           <input
             type="number"
             step=".00001"
