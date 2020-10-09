@@ -6,5 +6,5 @@ A Web App for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Pr
 To run this application in your local machine first install all the dependencies.
 then run below command 
 ```bash
-main.py runserver 8000
+manage.py runserver 8000
 ```
