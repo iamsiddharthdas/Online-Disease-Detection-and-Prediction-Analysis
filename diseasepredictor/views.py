@@ -15,13 +15,13 @@ def bmi(request):
         bmiv=(weight * 10000.0) / ( height * height)
         #print(bmi)
         if( bmiv < 18.5):
-            value= "You are UnderWeight"
+            value= "UnderWeight:("
         elif(bmiv >= 18.5) and (bmiv < 24.9) :
-            value= "You are Normal"
+            value= "Normal:)"
         elif(bmiv >= 25) and (bmiv < 29.9):
-            value= "You are Overweighed"
+            value= "Overweight:("
         elif(bmiv >= 30 ):
-            value= "You are Obese"
+            value= "Obese:("
         else:
             value="Please enter a Valid Input.."
 
@@ -103,9 +103,9 @@ def heart(request):
                   {
                       'context': value,
                       'title': 'Heart Disease Prediction',
-                      'active': 'btn btn-success peach-gradient text-grey',
+                      'active': 'btn btn-success peach-gradient text-white',
                       'heart': True,
-                      'background': 'bg-danger text-grey'
+                      'background': 'bg-danger text-white'
                   })
 
 
