@@ -15,22 +15,22 @@ def bmi(request):
         bmiv=(weight * 10000.0) / ( height * height)
         #print(bmi)
         if( bmiv < 18.5):
-            value= "UnderWeight"
+            value= "You are UnderWeight"
         elif(bmiv >= 18.5) and (bmiv < 24.9) :
-            value= "Normal"
+            value= "You are Normal"
         elif(bmiv >= 25) and (bmiv < 29.9):
-            value= "Overweight"
+            value= "You are Overweighed"
         elif(bmiv >= 30 ):
-            value= "Obese"
+            value= "You are Obese"
         else:
-            value="Invalid Input"
+            value="Please enter a Valid Input.."
 
     return render(request,
                   'bmi.html',
                   {
                       'context': value,
-                      'title': 'BMI-Prediction of Health Status',
-                      'active': 'btn btn-success peach-gradient text-white',
+                      'title': 'Body Mass Index(Health Status)',
+                      'active': 'btn btn-success peach-gradient text-violet',
                       'bmi': True,
                       'background': 'bg-secondary text-white '
                   })
@@ -94,18 +94,18 @@ def heart(request):
         predictions = rf.predict(user_data)
 
         if int(predictions[0]) == 1:
-            value = 'have'
+            value = 'You have:('
         elif int(predictions[0]) == 0:
-            value = "don\'t have"
+            value = "You don\'t have:)"
 
     return render(request,
                   'heart.html',
                   {
                       'context': value,
                       'title': 'Heart Disease Prediction',
-                      'active': 'btn btn-success peach-gradient text-white',
+                      'active': 'btn btn-success peach-gradient text-grey',
                       'heart': True,
-                      'background': 'bg-danger text-white'
+                      'background': 'bg-danger text-grey'
                   })
 
 
@@ -151,18 +151,18 @@ def diabetes(request):
         predictions = knn.predict(user_data)
 
         if int(predictions[0]) == 1:
-            value = 'have'
+            value = 'You have:('
         elif int(predictions[0]) == 0:
-            value = "don\'t have"
+            value = "You don\'t have:)"
 
     return render(request,
                   'diabetes.html',
                   {
                       'context': value,
-                      'title': 'Diabetes Disease Prediction',
-                      'active': 'btn btn-success peach-gradient text-white',
+                      'title': 'Diabetes Prediction',
+                      'active': 'btn btn-success peach-gradient text-grey',
                       'diabetes': True,
-                      'background': 'bg-dark text-white'
+                      'background': 'bg-dark text-grey'
                   }
                   )
 
@@ -201,18 +201,18 @@ def breast(request):
         print(predictions)
 
         if int(predictions[0]) == 1:
-            value = 'have'
+            value = 'You have:('
         elif int(predictions[0]) == 0:
-            value = "don\'t have"
+            value = "You don\'t have:)"
 
     return render(request,
                   'breast.html',
                   {
                       'context': value,
                       'title': 'Breast Cancer Prediction',
-                      'active': 'btn btn-success peach-gradient text-white',
+                      'active': 'btn btn-success peach-gradient text-grey',
                       'breast': True,
-                      'background': 'bg-info text-white'
+                      'background': 'bg-info text-grey'
                   })
 
 
