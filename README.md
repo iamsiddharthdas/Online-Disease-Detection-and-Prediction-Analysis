@@ -11,7 +11,3 @@ then run below command
 manage.py runserver 8000
 ```
 
-![webapp2](https://user-images.githubusercontent.com/57487500/95652552-8e9cfc80-0b0f-11eb-986d-97248ead0932.png)
-![webapp3](https://user-images.githubusercontent.com/57487500/95652557-9c528200-0b0f-11eb-9bbf-2e637ea0bca3.png)
-![webapp4](https://user-images.githubusercontent.com/57487500/95652566-ac6a6180-0b0f-11eb-9cf7-8111d6c90a34.png)
-![webapp5](https://user-images.githubusercontent.com/57487500/95652569-b12f1580-0b0f-11eb-9e10-b358e61c2f9a.png)
