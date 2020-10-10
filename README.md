@@ -11,3 +11,8 @@ then run below command
 manage.py runserver 8000
 ```
 
+### MediBot
+
+It provides doctors recommendation on the basis of disease predicted through symptoms selected by the user.
+
+![chatbot_console1](https://user-images.githubusercontent.com/57487500/95652776-3ebf3500-0b11-11eb-8816-f25701d33715.png)
