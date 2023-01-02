@@ -33,26 +33,10 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a
-            class="nav-item nav-link mr-3 {% if heart %} {{active}} {% endif %} "
-            href="{% url 'heart' %}"
-            >Heart Disease Prediction
-          </a>
-          <a
-            class="nav-item nav-link mr-3 {% if diabetes %} {{active}} {% endif %} "
-            href="{% url 'diabetes' %}"
-            >Diabetes Disease Prediction
-          </a>
-          <a
             class="nav-item nav-link mr-3 {% if breast %} {{active}} {% endif %} "
             href="{% url 'breast' %}"
           >
             Breast-Cancer Prediction
-          </a>
-          <a
-            class="nav-item nav-link mr-3 {% if bmi %} {{active}} {% endif %} "
-            href="{% url 'bmi' %}"
-          >
-            Body Mass Index(Health Status)
           </a>
         </div>
       </div>
